@@ -26,6 +26,7 @@ resource "azurerm_linux_virtual_machine" "dev" {
   name                = "vm-dev"
   resource_group_name = azurerm_resource_group.main.name
   location            = azurerm_resource_group.main.location
+  zone                = "1"
   size                = var.vm_size
   admin_username      = var.admin_username
   admin_password      = var.admin_password
@@ -53,6 +54,7 @@ resource "azurerm_linux_virtual_machine" "prod" {
   name                = "vm-prod"
   resource_group_name = azurerm_resource_group.main.name
   location            = azurerm_resource_group.main.location
+  zone                = "1"
   size                = var.vm_size
   admin_username      = var.admin_username
   admin_password      = var.admin_password
